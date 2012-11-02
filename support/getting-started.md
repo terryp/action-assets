@@ -41,6 +41,8 @@ Type "yes", which will add your Action box to your known_hosts ssh file.
 Warning: Permanently added '[apse1.actionbox.io]:10253,	[54.251.42.128]:10253' (RSA) to the list of known hosts.
 	Welcome to Action.IO (GNU/Linux 3.2.0-31-virtual x86_64)
 
+Now go ahead and poke around-- you should be in your remote box on Action.IO!
+
 ### 4. Add Action Box SSH Keys to Github
 
 So we've got our development box built, but what if we want to get a project we've been working on into our box on Action?

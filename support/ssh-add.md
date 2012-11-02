@@ -1,36 +1,8 @@
-You can use SSH Keys to manage your boxes directly from your local machine.  The steps listed below will help you generate a new SSH key and add the key to your Action.IO account.  
+SSH Keys enable you to manage your Action boxes directly from your computer.  The keypair is used to identify you when interacting with your box from outside of the website.
 
-If you have an existing SSH keypair you want to use you can skip down to step 4. 
+### 1: Generate a public key
 
-### 1. Check to see if you have existing SSH Keys
-
-Open up terminal:
-
-    cd ~/.ssh
-    # Checks to see if there is a directory named ".ssh" in your user directory
-
-If the terminal prompt says "No such file or directory" you can move to 3.) Otherwise go to 2.)
-
-### 2. Backup and remove existing SSH keys
-
-You already have an SSH directory so you'll want to back the old one up and delete it:
-
-    ls
-    # Lists all the subdirectories in the current directory
-    # config  id_rsa  id_rsa.pub  known_hosts
-
-    mkdir key_backup
-    # Makes a subdirectory called "key_backup" in the current directory
-
-    cp id_rsa* key_backup
-    # Copies the id_rsa keypair into key_backup
-
-    rm id_rsa*
-    # Deletes the id_rsa keypair
-
-### 3: Generate your new SSH key
-
-To generate a new SSH key, enter the code below. We want the default settings so when asked to enter a file in which to save the key, just press enter.
+On your **personal computer** enter the code below. We want the default settings so when asked to enter a file in which to save the key, just press enter.
 
     ssh-keygen -t rsa -C "your_email@youremail.com"
     # Creates a new ssh key using the provided email
@@ -38,7 +10,7 @@ To generate a new SSH key, enter the code below. We want the default settings so
     # Generating public/private rsa key pair.
     # Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
 
-Now you enter a passphrase (passphrases make things much more secure). 
+Now you enter a passphrase (passphrases make things more secure).
 
     # Enter passphrase (empty for no passphrase): [Type a passphrase]
     # Enter same passphrase again: [Type passphrase again]
@@ -49,40 +21,52 @@ Now you enter a passphrase (passphrases make things much more secure).
     # The key fingerprint is:
     # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@youremail.com
 
-### 4: Add your SSH key to Action.IO
+### 2: Adding keys to Action.IO
 
 Run the following code to copy the key to your clipboard.
 
     pbcopy < ~/.ssh/id_rsa.pub
     # Copies the contents of the id_rsa.pub file to your clipboard
 
-*** Make sure you copy the key _exactly_ without newlines or whitespace. The pbcopy command helps copy just the contents with no extraneous characters. ***
+** Make sure you copy the key _exactly_ without newlines or whitespace. The pbcopy command helps copy just the contents with no extraneous characters. **
 
-* Login to your Action.IO account 
-* Click "Public Keys" in the top right navigation
-* Click the "Add Public key" button
-* Add a name for the key e.g. "AJ's MBA"
-* Paste your key into the "Key" field
-* Click "Add key"
+If you don't have the pbcopy command, copy the output of the following command:
 
-### 5. Make sure it works!
+    cat ~/.ssh/id_rsa.pub
 
-To make sure everything works we'll now SSH into your box. You'll be asked to authenticate this action using your password, which is the passphrase you created earlier. 
+Next, Login to your Action.IO account and click "Public Keys" in the top right navigation.  You shouldn't have any keys listed if this is the first key you are adding. Click the "Add Public key" button:
 
-    ssh -T ssh@action.io
-    # Attempting to ssh to action
+![Public Key Button](https://raw.github.com/action-io/action-assets/master/support/screenshots/add-public-key-button.png)
 
-You may see this warning:
+Next, add a name for the SSH key e.g. "AJ's MBA".  This is helpful to identify which machines you've given access to your action boxes, so make it descriptive.
 
-    # The authenticity of host 'action.io ()' can't be established.
-    # RSA key fingerprint is 12:24:ac:35:41:9k:36:49:ac:ee:e9:98.
-    # Are you sure you want to continue connecting (yes/no)?
-   
-Don't worry, this is supposed to happen. Verify that the fingerprint matches the one here and type "yes".
+Then, paste your key into the "Key" field that you copied in section 2. of the article and click the "Add key".
 
-    # Hi username! You've successfully authenticated, but Action.IO does not
-    # provide shell access.
+![Public Key Form](https://raw.github.com/action-io/action-assets/master/support/screenshots/public-key-form.png)
 
-If that username is correct, you've successfully set up your SSH key. Don't worry about the shell access thing, you don't want that anyway.
+### 3. Make sure it works
 
-If you see "access denied" please consider using HTTPS instead of SSH. If you need SSH start at these instructions for diagnosing the issue.
+To make sure everything works we'll now SSH into your box. You'll be asked to authenticate this action using your password, which is the passphrase you created earlier.
+
+Click the "boxes" link in the top navigation.  Then click any box you've created to expand its details:
+
+![Box Details](https://raw.github.com/action-io/action-assets/master/support/screenshots/box-details.png)
+
+Click the SSH URI link, it should look something like the link in the screenshot above.
+
+Your browser will attempt to open a local terminal session. If there's a prompt like this, just click "Allow":
+
+![SSH Prompt](https://raw.github.com/action-io/action-assets/master/support/screenshots/ssh-confirm-prompt.png)
+
+In your terminal, you might see something like this:
+
+    The authenticity of host '[apse1.actionbox.io]:10253    ([54.251.42.128]:10253)' can't be established.
+    RSA key fingerprint is 57:b7:dd:50:04:09:e8:f8:e5:93:e1:2d:2f:46:a5:f5.
+    Are you sure you want to continue connecting (yes/no)? yes
+
+Don't worry, this is supposed to happen. Verify that the fingerprint matches the one here and type "yes". This will add your Action box to your known_hosts ssh file.
+
+    Warning: Permanently added '[apse1.actionbox.io]:10253, [54.251.42.128]:10253' (RSA) to the list of known hosts.
+    Welcome to Action.IO (GNU/Linux 3.2.0-31-virtual x86_64)
+
+Now you've got your SSH keys setup so you can connect via Terminal / PuTTY and use Vim or Emacs to code!
