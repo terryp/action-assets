@@ -47,24 +47,10 @@ Now go ahead and poke around-- you should be in your remote box on Action.IO!
 
 So we've got our development box built, but what if we want to get a project we've been working on into our box on Action?
 
-For this, you'll need to just add your Action box SSH keys to Github just like you would with your own development machine. You'll need to either:
+Adding SSH Keys to Github is super easy, just check out the steps in the following article:
 
-a. SSH into your Action.IO box
-b. Open the box IDE and use the in-browser console at the bottom of the IDE.
+[Adding SSH Keys to Github](http://help.action.io/customer/portal/articles/853510-adding-ssh-keys-to-github)
 
-If you need help generating your SSH keys on your action box you can refer again to [this article](http://help.action.io/customer/portal/articles/802633-add-ssh-keys-to-your-action-io-account).
-
-Now that we've got SSH keys on our Action box, we just need to add them to Github so we can interact with Github easily.
-
-* [Login to Github](https://github.com/login) or [create a free account](https://github.com/signup/free)
-* Click **Account Settings** on the top right menu
-
-![Github Account Menu](https://raw.github.com/action-io/action-assets/master/support/screenshots/github-account-menu.png)
-
-* Click **SSH Keys** on the left menu
-* Click **Add SSH Key** on the top right of the list of keys
-* Then just paste your Action.IO SSH key and give the key a name "Action-Rails" or something appropriate.
-
-Now, you can go back to your Action.IO box in your local terminal or in the Action.IO Web IDE and can clone the Github repo of your choice:
+Now, you can go back to your Action.IO box in your local terminal or in the Action.IO Web IDE and can clone any of your Github repos.
 
 [Now you rollin'](http://www.youtube.com/watch?v=CtwJvgPJ9xw&t=0m14s).
