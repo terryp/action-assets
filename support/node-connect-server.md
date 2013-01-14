@@ -1,5 +1,3 @@
-## How do I serve static files with Node.js?
-
 Using the "connect" npm package, you can serve static files easily with node. Make sure the "connect" npm package is installed first by running:
 
     npm install connect
