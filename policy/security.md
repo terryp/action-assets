@@ -1,12 +1,18 @@
 ### Action.IO The Platform & Web Service
 
-Action.IO is a cloud application platform used by software developers and software companies of all sizes to optimize development workflow.  Our platform allows developers to focus on development while Action.IO focuses on infrastructure management, development box setup and configuration and stack dissemination amongst teams.  
+Action.IO is a cloud application platform used by software developers and software companies of all sizes to optimize development workflow.  Our platform allows developers to focus on development while Action.IO focuses on infrastructure management, development box setup and configuration and stack dissemination amongst teams.
 
-We are dedicated to protecting the security of the development resources that we provide, and protecting the trust of our customers is paramount to our definition of success.  
+We are dedicated to protecting the security of the development resources that we provide, and protecting the trust of our customers is paramount to our definition of success. We build Action.IO on top of the Action.IO platform, so we are fully
+
+### Reporting a Security Vulnerability
+
+If you discovered a security vulnerability with the system, please email us immediately at [security@action.io](mailto: security@action.io). We will diligently investigate the details of the issue and will work with you to understand the scope of the issue presented. Security is one of our highest priorities and we will always immediately address any security concerns sent to [security@action.io](mailto: security@action.io).
+
+Because the security vulernability may affect other users, we ask that you please do not share the issue publicly. We will avoid taking legal action against you or action against your account if you act in the benefit of the privacy of our community.  We appreciate your research for the improvement of the system.
 
 ### Security Assessments and Compliance
 
-#### Data Centers / Infrastructure 
+#### Data Centers / Infrastructure
 
 Action.IO’s physical infrastructure is hosted and managed within Amazon’s secure data centers and utilize the Amazon Web Service (AWS) technology. Amazon continually manages risk and undergoes recurring assessments to ensure compliance with industry standards. Amazon’s data center operations have been accredited under:
 
@@ -143,14 +149,14 @@ For additional information see: https://aws.amazon.com/security
 
 Action.IO has a published privacy policy that clearly defines what data is collected and how it is used.  Action.IO is committed to customer privacy and transparency.
 
-We takes steps to protect the privacy of our customers and protect data stored within the platform. Some of the protections inherent to Action.IO’s products include authentication, access controls, data transport encryption, HTTPS support for customer applications, and the ability for customers to encrypt stored data. 
+We takes steps to protect the privacy of our customers and protect data stored within the platform. Some of the protections inherent to Action.IO’s products include authentication, access controls, data transport encryption, HTTPS support for customer applications, and the ability for customers to encrypt stored data.
 
 
 
 ### Access to Customer Data
 
 The Action.IO staff does not access or interact with customer data or applications as part of normal operations. There may be cases where Action.IO is requested to interact with customer data or applications at the request of the customer for support purposes or where required by law. Customer data is access controlled and all access by Action.IO staff is accompanied by customer approval or government mandate, reason for access, actions taken by staff, and support start and end time.
-                
+
 ### Customer Security Best Practices
 
 #### Encrypt Data in Transit
