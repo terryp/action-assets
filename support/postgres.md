@@ -6,6 +6,7 @@ on your Action.IO box.
 In: [Heroku Postgres](https://postgres.heroku.com)
 
 ![Heroku Postgres Homepage](https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/hpgres.png)
+
 Go ahead and sign into Heroku Postgres. Once in the dashboard, you'll
 see a list of any databases you've already created. Click the "Create
 Database" button on the top-right of the screen.
@@ -66,6 +67,7 @@ This should return "ec2-107-22-164-225.compute-1.amazonaws.com"
 
 You can now access your database in your Rails application for e.g. by
 using
+
     ENV['TODO_APP_DEV_HOST'], ENV['TODO_APP_DEV_PORT'],
     ENV['TODO_APP_DEV_USER'], ENV['TODO_APP_DEV_PASSWORD'],
     ENV['TODO_APP_DEV_DATABASE']
@@ -88,9 +90,10 @@ blog](http://blog.action.io/2013/02/11/postgres-action-io-3.html)
 #### Node.JS
 
 In Node.JS, you can access each of the environment variables by using 
-    process.env['TODO_APP_DEV_HOST'], process.env['TODO_APP_DEV_PORT'],
-    process.env['TODO_APP_DEV_USER'], process.env['TODO_APP_DEV_PASSWORD'],
-    process.env['TODO_APP_DEV_DATABASE']
+
+    process.env.TODO_APP_DEV_HOST, process.env.TODO_APP_DEV_PORT,
+    process.env.TODO_APP_DEV_USER, process.env.TODO_APP_DEV_PASSWORD,
+    process.env.TODO_APP_DEV_DATABASE
 
 (Please note, you'll probably need to install the
 [pg](https://npmjs.org/package/pg) NPM 
@@ -106,6 +109,7 @@ Postgres credentials for use within a Node.JS server.
 #### Django/Python
 
 In Python, you can access each of the environment variables by using 
+
     os.environ['TODO_APP_DEV_HOST'], "os.environ['TODO_APP_DEV_PORT'],
     os.environ['TODO_APP_DEV_USER'], "os.environ['TODO_APP_DEV_PASSWORD'],
     os.environ['TODO_APP_DEV_DATABASE']
