@@ -1,9 +1,8 @@
-
-Due to the way we handle network configuration on boxes, you will not be able to bind http servers to localhost (127.0.0.1)
+Due to the way we handle network configuration on boxes, you will not be able to bind http servers to localhost (127.0.0.1).
 
 Your application will need to run on 0.0.0.0 or a specific IP address. Listening on port 3000 will allow you to use our preview menu for a shortcut.
 
-### Node example
+### Node.js example
 
 Setting up a hello world web server on port 3000 using node.js.
 
@@ -16,7 +15,21 @@ Setting up a hello world web server on port 3000 using node.js.
 
     console.log('Server running at http://0.0.0.0:3000/');
 
-### Previewing the app
+### Python example
+
+When running a simple development server with Django, we recommend:
+
+    python manage.py runserver 0.0.0.0:3000
+
+
+### Python on Google App Engine
+
+When running the development app server on Google App Engine, we recommend:
+
+    devappserver.py --address=0.0.0.0 --port=3000
+
+
+### Previewing the application
 
 We supply some sensible default ports to enable you to preview your work in the browser. You can get your preview link in 1 of 2 ways:
 
