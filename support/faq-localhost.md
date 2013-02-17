@@ -15,14 +15,14 @@ Setting up a hello world web server on port 3000 using node.js.
 
 ### Python example
 
-When running a simple development server with Django, we recommend:
+When running a simple development server with [Django](https://docs.djangoproject.com/en/dev/intro/), we recommend:
 
     python manage.py runserver 0.0.0.0:3000
 
 
 ### Python on Google App Engine
 
-When running the development app server on Google App Engine, we recommend:
+When running the development app server on [Google App Engine](https://developers.google.com/appengine/docs/python/gettingstarted/), we recommend:
 
     devappserver.py --address=0.0.0.0 --port=3000
 
@@ -31,10 +31,10 @@ When running the development app server on Google App Engine, we recommend:
 
 We supply some sensible default ports to enable you to preview your work in the browser. You can get your preview link in 1 of 2 ways:
 
-1. Launch the Web IDE for your box, click the "Preview" menu and select the port where your web server is running.
+Launch the Web IDE for your box, click the "Preview" menu and select the port where your web server is running.
 
 ![Preview Menu](https://raw.github.com/action-io/action-assets/master/support/screenshots/preview-menu.png)
 
-2. In your list of boxes, click the box name to toggle it's details, copy the Preview URL and paste it in your browser. Change the port to 3000 or the applicable port where your server is running.
+In your list of boxes, click the box name to toggle it's details, copy the Preview URL and paste it in your browser. Change the port to 3000 or the applicable port where your server is running.
 
 ![Box Preview URL](https://raw.github.com/action-io/action-assets/master/support/screenshots/box-preview-url.png)
