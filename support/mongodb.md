@@ -1,28 +1,26 @@
 This guide walks through how you can setup a MongoDB database
 on your Action.IO box.
 
-### Create a Database on MongoLab
-
 In: [MongoLab](https://mongolab.com)
 
 ![MongoLab](https://raw.github.com/action-io/action-assets/master/support/screenshots/mongodb/mongolab.png)
 
-Go ahead and sign into MongoLab . Once in the dashboard, you'll
-see a list of any databases you've already created. Click the "Create
-New" button in the "Databases" section.
+Go ahead and sign into MongoLab. Once in the dashboard, you'll
+see a list of any databases you've already created. Click the **Create
+New** button in the **Databases** section.
 
 You'll see a bunch of professional plans appear below. You can ignore
 these until you've deployed your new world-changing application to
 production and you have millions of customers and can afford them.
 
 MongoLab knows we need something lightweight to get our feet wet, so for
-now we'll just pick the "Free (0.5GB)" plan.
+now we'll just pick the **Free (0.5GB)** plan.
 
-Pick your Cloud Provider to be "Amazon Web Services" and choose either
-the "EU-West-1 (Ireland)" or "US-East-1 (Virginia)" - whichever is
+Pick your Cloud Provider to be **Amazon Web Services** and choose either
+the **EU-West-1 (Ireland)** or **US-East-1 (Virginia)** - whichever is
 geographically close to the Action.IO box that you created.
 
-Pick a name for your database, say "my-awesome-apps-mongodb" as well as
+Pick a name for your database, say **my-awesome-apps-mongodb** as well as
 a username and password (which you will use later to connect to your
 MongoDB database).
 
@@ -42,12 +40,12 @@ one you set earlier while creating your database.
 
 ![MongoLab Settings](https://raw.github.com/action-io/action-assets/master/support/screenshots/mongodb/mongodb-settings.png)
 
-As seen in the screenshot, "ds043447.mongolab.com" is the host, "43447"
-is the port, "my-awesome-apps-mongodb" is the database name, "<dbuser>", "<dbpassword>"
+As seen in the screenshot, **ds043447.mongolab.com** is the host, **43447**
+is the port, **my-awesome-apps-mongodb** is the database name, **dbuser**, **dbpassword**
 is the username/password combination that you set earlier.
 
 Grab each of the values and assign them to environment variables in your
-"~/.bash_profile" file on your Action.IO box. It is good practice to
+**~/.bash_profile** file on your Action.IO box. It is good practice to
 namespace your environment variables variables with the environment that you want to use your database in
 (development or test), like so:
 
@@ -59,18 +57,20 @@ environment variables).
 
 This will ensure that every time you log into your Action.IO box, your
 database credentials will be available as environment variables to use
-in any of your apps. 
+in any of your apps.
 
 If you want the environment variables to be loaded immediately, run
+
     source ~/.bash_profile
 
 You can verify that your MongoDB credentials are loaded correctly by
 running
+
     echo $MONGODB_DEVELOPMENT_HOST
 
-This should return "ds043447.mongolab.com"
+This should return **ds043447.mongolab.com**
 
-#### Connecting with the Official MongoDB Client
+### Connecting with the Official MongoDB Client
 
 All Action.IO boxes come bundled with the official "mongo" client which
 can be used to connect to the database. You can connect to the MongoLab
@@ -80,7 +80,7 @@ MongoDB database that you just created, by using the command
 
 ![MongoDB Shell](https://raw.github.com/action-io/action-assets/master/support/screenshots/mongodb/shell.png)
 
-#### Rails/Ruby
+### Rails/Ruby
 
 You can now access your database in your Rails application for e.g. by
 using
@@ -103,16 +103,16 @@ the uri to be "ENV['MONGODB_DEVELOPMENT_URI']"
 
 ![Rails MongoDB Settings](https://raw.github.com/action-io/action-assets/master/support/screenshots/mongodb/database-ruby.png)
 
-#### Node.JS
+### Node.JS
 
-In Node.JS, you can access each of the environment variables by using 
+In Node.JS, you can access each of the environment variables by using
 
     process.env.MONGODB_DEVELOPMENT_HOST, process.env.MONGODB_DEVELOPMENT_PORT,
     process.env.MONGODB_DEVELOPMENT_USER, process.env.MONGODB_DEVELOPMENT_PASSWORD,
     process.env.MONGODB_DEVELOPMENT_DB, process.env.MONGODB_DEVELOPMENT_URI
 
 (Please note, you'll probably need to install the
-[mongoose](https://npmjs.org/package/mongoose) NPM 
+[mongoose](https://npmjs.org/package/mongoose) NPM
 before you use Postgres in a Node.JS app, using the following command:
 
     npm install mongoose
@@ -122,9 +122,9 @@ mongoose
 
 ![Node.JS MongoDB Settings](https://raw.github.com/action-io/action-assets/master/support/screenshots/mongodb/database-nodejs.png)
 
-#### Django/Python
+### Django/Python
 
-In Python, you can access each of the environment variables by using 
+In Python, you can access each of the environment variables by using
 
     os.environ['MONGODB_DEVELOPMENT_HOST'], "os.environ['MONGODB_DEVELOPMENT_PORT'],
     os.environ['MONGODB_DEVELOPMENT_USER'], "os.environ['MONGODB_DEVELOPMENT_PASSWORD'],
@@ -132,7 +132,7 @@ In Python, you can access each of the environment variables by using
 
 The instructions in the official MongoDB documentatin for Python is an
 excellent guide, but you can replace the settings in settings.py with
-the MongoLab variables, like so: 
+the MongoLab variables, like so:
 
 ![Python MongoDB Settings](https://raw.github.com/action-io/action-assets/master/support/screenshots/mongodb/database-python.png)
 

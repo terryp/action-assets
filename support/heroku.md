@@ -1,5 +1,3 @@
-# Connecting your Heroku Account
-
 Action.IO integrates with Heroku for convenient and easy application deployment. Connecting your Action.IO box to Heroku is easy:
 
 ### 1. [Login](https://action.io/login) to your Action.IO account
