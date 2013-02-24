@@ -18,7 +18,7 @@ If you haven't already connected to Github, [Generate a public key for your newl
 
 ![Reveal Public Key](https://raw.github.com/action-io/action-assets/master/support/screenshots/reveal-public-key.png)
 
-#### 4. Authenticate with Heroku
+### 4. Authenticate with Heroku
 
      heroku login
      username: aj@action.io
