@@ -4,7 +4,7 @@ We recommend that you use a modern web browser that support [websockets](http://
 
 * [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
 * [Mozilla Firefox](http://www.mozilla.org/en-US/firefox/new/)
-* [Opera](http://www.opera.com/)
+* [Opera](http://www.opera.com/download/)
 
 ### Will the site work in Internet Explorer?
 
