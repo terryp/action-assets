@@ -34,3 +34,8 @@ If you're developing a Ruby on Rails project and using the default WEBrick web s
     rails server
 
 This will fire up an instance of the WEBrick web server by default (Rails can also use several other web servers). To see your application in action, click the "Preview" menu and select "Port 3000". You should see your Rails development project in the new window that is opened.  
+
+### Other Frameworks
+
+For help on previewing applications written in other languages and frameworks, check the following [support article](http://help.action.io/customer/portal/articles/1000558-problems-running-server-on-localhost).
+
