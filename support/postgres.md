@@ -54,22 +54,24 @@ variables with the environment that you want to use your database in
 
 ![Env Variables](https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/env-variables.png)
 
-If you want the environment variables to be loaded immediately, run
+If you want the environment variables to be loaded immediately, run:
     source ~/.bashrc
 
 You can verify that your Postgres credentials are loaded correctly by
-running
+running:
     echo $TODO_APP_DEV_HOST
 
 This should return "ec2-107-22-164-225.compute-1.amazonaws.com"
 
 #### Rails/Ruby
 
-You can now access your database in your Rails application for e.g. by
-using
+You can now access your database in your Rails application by doing the
+following:
 
-    ENV['TODO_APP_DEV_HOST'], ENV['TODO_APP_DEV_PORT'],
-    ENV['TODO_APP_DEV_USER'], ENV['TODO_APP_DEV_PASSWORD'],
+    ENV['TODO_APP_DEV_HOST']
+    ENV['TODO_APP_DEV_PORT']
+    ENV['TODO_APP_DEV_USER']
+    ENV['TODO_APP_DEV_PASSWORD']
     ENV['TODO_APP_DEV_DATABASE']
 
 (Please note, you'll probably need to install the
@@ -89,10 +91,12 @@ blog](http://blog.action.io/2013/02/11/postgres-action-io-3.html)
 
 #### Node.JS
 
-In Node.JS, you can access each of the environment variables by using 
+In Node.JS, you can access each of the environment variables by using:
 
-    process.env.TODO_APP_DEV_HOST, process.env.TODO_APP_DEV_PORT,
-    process.env.TODO_APP_DEV_USER, process.env.TODO_APP_DEV_PASSWORD,
+    process.env.TODO_APP_DEV_HOST
+    process.env.TODO_APP_DEV_PORT
+    process.env.TODO_APP_DEV_USER
+    process.env.TODO_APP_DEV_PASSWORD
     process.env.TODO_APP_DEV_DATABASE
 
 (Please note, you'll probably need to install the
@@ -101,17 +105,19 @@ before you use Postgres in a Node.JS app, using the following command:
 
     npm install -g pg
 
-Here's an example of a settings.coffee file which initializes the Heroku
-Postgres credentials for use within a Node.JS server.
+Here's an example nodejs code to connect to Heroku Postgres using the
+environment variables we have set up.
 
 ![Postgres Settings](https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-nodejs.png)
 
 #### Django/Python
 
-In Python, you can access each of the environment variables by using 
+In Python, you can access each of the environment variables by using:
 
-    os.environ['TODO_APP_DEV_HOST'], "os.environ['TODO_APP_DEV_PORT'],
-    os.environ['TODO_APP_DEV_USER'], "os.environ['TODO_APP_DEV_PASSWORD'],
+    os.environ['TODO_APP_DEV_HOST']
+    os.environ['TODO_APP_DEV_PORT']
+    os.environ['TODO_APP_DEV_USER']
+    os.environ['TODO_APP_DEV_PASSWORD']
     os.environ['TODO_APP_DEV_DATABASE']
 
 (Please note, you'll probably need to install the
