@@ -1,5 +1,10 @@
 SSH Keys enable you to manage your Action boxes directly from your computer.  The keypair is used to identify you when interacting with your box from outside of the website.
 
+<ul class="inline choices">
+  <li class="selected">Mac</li>
+  <li><a href="http://help.action.io/customer/portal/articles/1034948-add-ssh-keys-to-action-io-windows-xp-">Windows</a></li>
+</ul>
+
 ### 1: Generate a public key
 
 On your **personal computer** enter the code below. We want the default settings so when asked to enter a file in which to save the key, just press enter.

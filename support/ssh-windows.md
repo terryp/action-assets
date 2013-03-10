@@ -1,5 +1,10 @@
 SSH Keys enable you to manage your Action boxes directly from your computer via your favorite SSH client.  The keypair is used to identify you when interacting with your box from outside of [our website](https://action.io).
 
+<ul class="inline choices">
+  <li><a href="http://help.action.io/customer/portal/articles/802633-add-ssh-keys-to-action-io">Mac</a></li>
+  <li class="selected">Windows</li>
+</ul>
+
 On Windows, we recommend that you use [PuttyGen](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). Visit this link and look for the PuttyGen download:
 
 [http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
