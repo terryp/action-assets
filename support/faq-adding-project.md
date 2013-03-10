@@ -105,10 +105,10 @@ Prerequisites:
 Read this article about how to connect your github account to Action.IO:
 
 **Mac:**
-http://help.action.io/customer/portal/articles/853510-adding-ssh-keys-to-github
+[http://help.action.io/customer/portal/articles/853510-adding-ssh-keys-to-github](http://help.action.io/customer/portal/articles/853510-adding-ssh-keys-to-github)
 
 **Windows:**
-
+[http://help.action.io/customer/portal/articles/1034948-add-ssh-keys-to-action-io-windows-xp-](http://help.action.io/customer/portal/articles/1034948-add-ssh-keys-to-action-io-windows-xp-)
 
 Once you've successfully setup your SSH keys, you can easily clone repositories from Github to your Action.IO boxes.
 
