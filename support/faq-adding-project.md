@@ -8,7 +8,7 @@ We get a lot of emails asking how to upload applications to an Action.IO box. Th
 
 Uploading via SFTP requires that you have set up your public / private keypair on your machine and added your public key to Action.IO. To do this, we recommend that you use PuttyGen. Visit this link and look for the PuttyGen download:
 
-http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
 ![PuTTYgen](https://raw.github.com/action-io/action-assets/master/support/screenshots/puttygen.png)
 
@@ -65,15 +65,15 @@ Then click the **OK** button.
 
 Ok, now that we've added the key to Filezilla, lets go ahead and add the connection details.
 
-1. Click File > Site Manager in the application menu
+#### 1. Click File > Site Manager in the application menu
 
 ![filezilla site manager](https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-sitemanager.png)
 
-2. Click the **New Site** button and name the connection profile. I'm going to name it the same as my box on Action.IO
+#### 2. Click the **New Site** button and name the connection profile. I'm going to name it the same as my box on Action.IO
 
 ![filezilla new site](https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-newsite.png)
 
-3. Type in **action** as the username and the relevant **host** and **port** information from your box details page on Action.IO:
+#### 3. Type in **action** as the username and the relevant **host** and **port** information from your box details page on Action.IO:
 
 ![filezilla box details](https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/box-details.png)
 
