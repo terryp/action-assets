@@ -15,6 +15,13 @@ On your **personal computer** enter the code below. We want the default settings
     # Generating public/private rsa key pair.
     # Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
 
+*Note* In the case you already have ssh keys on your machine, you should consider saving your key to a different file *not* `id_rsa`. For example:
+
+    ssh-keygen -t rsa -C "your_email@youremail.com" -f ~/.ssh/action_io_rsa
+    # Creates a new ssh key and saves in your local .ssh folder
+    
+    # Generating public/private rsa key pair.
+
 Now you enter a passphrase (passphrases make things more secure).
 
     # Enter passphrase (empty for no passphrase): [Type a passphrase]
